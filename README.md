@@ -1,5 +1,5 @@
 # AI-Projects
-Just some AI projects that interest me
+Just some awesome AI projects that interest me
 
 # Hi, I'm Amogh Thoutu
 
