@@ -1,4 +1,4 @@
-# AI-Projects
+# AI_Projects
 Just some awesome AI projects that interest me
 
 # Hi, I'm Amogh Thoutu
