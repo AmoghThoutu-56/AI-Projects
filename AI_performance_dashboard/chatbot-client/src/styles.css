@@ -1,0 +1,86 @@
+/*  - centers page on the screen 
+    - limits the wifth to 600px
+    - uses a verticcal layout
+    - takes up full height of the viewport
+*/
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HTML heading
+    - centers the heading
+    - rem is scalable unit based on the root font size, usually 1 rem is 16px
+    - 1rem top and bottom margin
+    - 0 margin on left and right
+*/
+
+h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/*
+    - grows to fill available vertical space
+    - adds vertical scroll bar for messages
+    - ???? background color
+    - adds padding around the messages
+*/
+
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #f0f0f0;
+    border: 1px solid #ccc
+    }
+
+/*
+    - adds space between messages
+*/
+.message {
+    margin-bottom: 1rem;  
+}
+
+/*
+    - Aligns user messages to the right
+    - ??? colour for user messages
+*/
+.message.user {
+    text-align: right;
+    color: blue;
+}
+
+/*
+    - Align's bot messgaes to the left
+    - ??? colour for bot messages
+*/
+.messaage.bot {
+    text-align: left;
+    color: green;
+}
+
+/* 
+    - Input box is a flex container, to take up all available space excluding the button
+*/
+.input-box input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/*
+    - Send button
+    - adds margin to the left of the button
+    - adds padding to the button
+    - sets font size to 1rem
+*/
+.input-box button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
