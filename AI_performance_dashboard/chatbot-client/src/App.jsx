@@ -37,7 +37,7 @@ function App() {
   // InputBox recieves handleSend as callback prop to send user messages
   return (
     <div className="app">
-      <h2>Gemini Chatbot</h2>
+      <h2>LLM Performance Tracker</h2>
       <ChatWindow messages={messages} />
       <InputBox onSend={handleSend} />
     </div>

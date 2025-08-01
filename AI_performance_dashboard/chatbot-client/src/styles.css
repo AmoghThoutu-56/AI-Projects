@@ -3,8 +3,15 @@
     - uses a verticcal layout
     - takes up full height of the viewport
 */
+
+body{
+    background: linear-gradient(to bottom, #161625, #20325e);
+    overflow: hidden;
+    /* background-color: #161625; */
+}
+
 .app {
-    max-width: 600px;
+    max-width: flex;
     margin: 0 auto;
     font-family: sans-serif;
     display: flex;
@@ -22,6 +29,8 @@
 h2 {
     text-align: center;
     margin: 1rem 0;
+    color: #b5b5ea
+    
 }
 
 /*
@@ -31,13 +40,34 @@ h2 {
     - adds padding around the messages
 */
 
-.chat-window {
+.chat_window {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
     padding: 1rem;
-    background: #f0f0f0;
-    border: 1px solid #ccc
-    }
+    background: linear-gradient(to bottom, #161625, #1d2e55);
+    /* background: #14213f; */
+    /* border: 1px solid #000000; */
+}
+
+.chat_window::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat_window::-webkit-scrollbar-thumb {
+    background: #6a6aa3;
+    border-radius: 10px;
+}
+
+.chat_window::-webkit-scrollbar-track {
+    background: #152446;
+    border-radius: 10px;
+}
+
+.chat_window::-webkit-scrollbar-thumb:hover {
+    background: #5a5aa3;
+}
 
 /*
     - adds space between messages
@@ -51,26 +81,62 @@ h2 {
     - ??? colour for user messages
 */
 .message.user {
-    text-align: right;
-    color: blue;
+    color: #c6daef;
+    background-color: rgba(16, 33, 73, 0.8);
+    display: inline-block;
+    max-width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin: 0.3rem 0;
+    word-wrap: break-word;
+    align-self: flex-end;
+    text-align: left;
 }
 
 /*
     - Align's bot messgaes to the left
     - ??? colour for bot messages
 */
-.messaage.bot {
+.message.bot {
+    color: #c6daef;
+    background-color: rgba(7, 18, 43, 0.8);
+    display: inline-block;
+    max-width: 80%;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    margin: 0.3rem 0;
+    word-wrap: break-word;
+    align-self: flex-start;
     text-align: left;
-    color: green;
 }
 
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    
+}
 /* 
     - Input box is a flex container, to take up all available space excluding the button
 */
-.input-box input {
-    flex: 1;
+.input-box textarea {
+    width: 90vw;
+    min-height: 7rem;
+    margin-bottom: 1rem;
     padding: 0.5rem;
     font-size: 1rem;
+    vertical-align: top;
+    resize: none;
+    background-color: #c7c7d3;
+    border-radius: 15px;
+}
+
+#send {
+    color: #0e1130;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 /*
@@ -80,7 +146,18 @@ h2 {
     - sets font size to 1rem
 */
 .input-box button {
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
     padding: 0.5rem 1rem;
     font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    width: 92vw;
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: #6a6aa3;
+    transition: transform 0.1s ease;
+}
+
+.input-box button:active {
+    transform:scale(0.97);
 }

@@ -32,15 +32,15 @@ function InputBox({ onSend }) {
     // text input box bound to the input state
     return (
         <form onSubmit = {handleSubmit} className = "input-box">
-            <input 
+            <textarea 
                 type = "text"
                 value = {input}
                 // onChange updates the state as the user types
                 onChange = {(e) => setInput (e.target.value)}
-                placeholder = "type your message..."
+                placeholder = "Ask me anything..."
             />
             {/* Submit button to send the message */}
-            <button tyoe = "submit"> Send</button>
+            <button type = "submit"> <span id='send'>Send</span></button>
         </form>
     );
 }
